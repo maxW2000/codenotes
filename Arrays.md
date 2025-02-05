@@ -1,6 +1,6 @@
-#双指针技巧
+# 双指针技巧
 
-##左右指针
+## 左右指针
 [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)
 
 不需要考虑相对位置 如果考虑就需要用快慢指针 参考283. movezero
@@ -10,7 +10,7 @@
 
 [LCR 006. 两数之和 II - 输入有序数组](https://leetcode.cn/problems/kLl5u1/description/)
 
-##快慢指针
+## 快慢指针
 一般都有一个快指针负责探路判断 慢指针负责处理结果 随后再增加
 [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
 
@@ -18,11 +18,11 @@
 
 [83. Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/)
 
-##中心扩散指针
+## 中心扩散指针
 以每个元素为中心进行中心扩散去寻找回文串，并记录当前回文串的长度
 [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description/)
 
-##滑动窗口
+## 滑动窗口
 本质也是指针 但是需要去维护这个窗口，这个窗口一般是一个hashmap，用左右指针去填入且维护这个窗口 
 O(N)复杂度，在于**如何聪明的穷举**
 ```

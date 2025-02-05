@@ -32,6 +32,7 @@ def slidingWindow(s: str):
     # 比如说，我想记录窗口中元素出现的次数，就用 map
     # 如果我想记录窗口中的元素和，就可以只用一个 int
     window = ...
+    need = ... #可选 取决于题目是否有安排字串的匹配需求
 
     left, right = 0, 0
     while right < len(s):
@@ -50,7 +51,7 @@ def slidingWindow(s: str):
         # ***********************
 
         # 判断左侧窗口是否要收缩
-        while left < right and window needs shrink:
+        while left < right and window needs to shrink:
             # d 是将移出窗口的字符
             d = s[left]
             window.remove(d)

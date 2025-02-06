@@ -1,6 +1,6 @@
 # 双指针技巧
 
-## 左右指针
+## 左右指针 从最左和最右
 [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)
 
 不需要考虑相对位置 如果考虑就需要用快慢指针 参考283. movezero
@@ -22,10 +22,10 @@
 以每个元素为中心进行中心扩散去寻找回文串，并记录当前回文串的长度
 [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description/)
 
-## 滑动窗口
-- **本质也是左右指针 但是需要去维护这个窗口**
+## 滑动窗口 
+- **本质也是双指针 一快一慢  但是需要去维护这个窗口**
 - **思考什么时候缩小窗口 什么时候更新窗口，条件是什么**
-- **windows**一般就是包含满足条件的字符
+- **windows**一般就是包含满足条件的字符 找字串
 - **need**是题目要求的子串的字典 字符:个数 需要初始化给予
 - O(N)复杂度，在于**如何聪明的穷举**
 ```
@@ -41,13 +41,18 @@ def slidingWindow(s: str):
     """
 
     left, right = 0, 0
+    #也可能有valid = 0 一般看题目的子串要求
+    #valid 是出现字符数相等时才更新的 比如need有2个a 所以window也得有2个a才会++
+    #这样只需要比较valid与need的长度匹配 那就说明当前窗口与字串要求（具体要求需要自己更改去写）是匹配的 因为不需要管顺序
+
     while right < len(s):
         # c 是将移入窗口的字符
         c = s[right]
-        window.add(c)
         # 增大窗口
         right += 1
         # 进行窗口内数据的一系列更新
+        # 有条件的去
+        window.add(c)
         ...
 
         # *** debug 输出的位置 ***
@@ -68,6 +73,22 @@ def slidingWindow(s: str):
 ```
 [3. Longest Substring Without Repeating Characters](https://labuladong.online/algo/essential-technique/sliding-window-framework/)
 [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/description/)
+[76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)
+[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/description/)
+
+有些题目就不需要windows 比如
+[713. Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/description/)
+
+# 二分查找
+细节实现是魔鬼 while的判断 left right指针的修改
+[704. Binary Search](https://leetcode.com/problems/binary-search/description/)
+[34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/)
+```
+#计算 mid 时需要防止溢出
+#mid = left + (right - left) / 2 就和 (left + right) / 2 的结果相同，但是有效防止了 left 和 right 太大，直接相加导致溢出的情况。
+
+```
+## 左侧边界与右侧边界的二分查找
 
 
 

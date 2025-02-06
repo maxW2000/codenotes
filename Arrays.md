@@ -23,7 +23,10 @@
 [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description/)
 
 ## 滑动窗口
-本质也是指针 但是需要去维护这个窗口，这个窗口一般是一个hashmap，用左右指针去填入且维护这个窗口 
+**本质也是指针 但是需要去维护这个窗口，这个窗口就是左右指针组成的 
+思考什么时候缩小窗口 什么时候更新窗口，条件是什么**
+**windows**一般就是包含满足条件的字符
+**need**是题目要求的子串的字典 字符:个数 需要初始化给予
 O(N)复杂度，在于**如何聪明的穷举**
 ```
 # 滑动窗口算法伪码框架
@@ -33,6 +36,9 @@ def slidingWindow(s: str):
     # 如果我想记录窗口中的元素和，就可以只用一个 int
     window = ...
     need = ... #可选 取决于题目是否有安排字串的匹配需求
+    """ window[c] = window.get(c,0) + 1
+        get操作可以如果有c 就返回c的value 没有就返回0 所以更好用
+    """
 
     left, right = 0, 0
     while right < len(s):
@@ -61,6 +67,8 @@ def slidingWindow(s: str):
             ...
 ```
 [3. Longest Substring Without Repeating Characters](https://labuladong.online/algo/essential-technique/sliding-window-framework/)
+[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/description/)
+
 
 
 

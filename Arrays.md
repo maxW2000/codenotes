@@ -72,10 +72,10 @@ def slidingWindow(s: str):
             # 进行窗口内数据的一系列更新
             ...
 ```
-[3. Longest Substring Without Repeating Characters](https://labuladong.online/algo/essential-technique/sliding-window-framework/)
-[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/description/)
-[76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)
-[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/description/)
+[3. Longest Substring Without Repeating Characters](https://labuladong.online/algo/essential-technique/sliding-window-framework/) <br>
+[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/description/)<br>
+[76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)<br>
+[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/description/)<br>
 
 有些题目就不需要windows 比如
 [713. Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/description/)

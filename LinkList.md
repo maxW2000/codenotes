@@ -52,3 +52,60 @@ class Solution:
         return dummy1.next
             
 ```
+
+## 反转链表
+[206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
+
+**由于单链表的结构，至少要用三个指针才能完成迭代反转** <br>
+pre, cur, nex 三个指针 一个一个反转
+```
+#反转当前节点
+cur.next = pre
+
+#指针更新 向后移动过
+pre = cur
+cur = nex
+if nex is not None:
+    nex = nex.next
+```
+
+[92. Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list/description/)
+反转链表的一部分
+**当成一个以left为起点 反转前right - left + 1的链表**
+```
+def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
+        
+        # 把他当成反转前n个链表 只是以left为起点 前n个节点为right - left + 1
+        # 就是反转一个以 left为起点的链表（后面的都算上）
+        if left == 1:
+            return self.reverseN(head, left)
+        
+        pre = head
+        # 找left的前一个结点
+        for i in range(1, left - 1):
+            pre = pre.next
+        # 从第 left 个节点开始反转
+        pre.next = self.reverseN(pre.next, right - left + 1)
+
+        return head
+    
+    def reverseN(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        while head is None or head.next is None:
+            return head
+        
+        pre, cur, nex = None, head, head.next
+        while n > 0:
+            cur.next = pre
+            pre = cur
+            cur = nex
+            if nex is not None:
+                nex = nex.next
+            n -= 1
+        
+        # 以当前pre为全新的head
+        # 此时的 cur 是第 n + 1 个节点，head 是反转后的尾结点
+        head.next = cur
+        return pre
+```
+
+

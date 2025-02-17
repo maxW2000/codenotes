@@ -71,6 +71,7 @@ if nex is not None:
 
 [92. Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list/description/)
 反转链表的一部分
+**去看反转前N个是怎么反转的 最后head就是反转后的尾节点 指向cur就可以**
 **当成一个以left为起点 反转前right - left + 1的链表**
 ```
 def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
@@ -105,7 +106,16 @@ def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Opt
         # 以当前pre为全新的head
         # 此时的 cur 是第 n + 1 个节点，head 是反转后的尾结点
         head.next = cur
+
+b       # 此时的 pre 是反转后的头结点
         return pre
 ```
+
+[25. Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/description/)
+递归实现 [具体思路](https://labuladong.online/algo/data-structure/reverse-linked-list-recursion/#%E6%9C%80%E5%90%8E%E6%80%BB%E7%BB%93)
+把问题分解成 以k个为一个的子链表
+1. a指针反转前k个链表 (reserveN(head, n))函数
+2. b指针指向下一个子链表 
+3. 返回第一步 递归到调用主函数到尾
 
 

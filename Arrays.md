@@ -11,6 +11,13 @@
 [LCR 006. 两数之和 II - 输入有序数组](https://leetcode.cn/problems/kLl5u1/description/)
 [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/)
 
+
+[88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/description/) <br>
+**转换一下思路将双指针初始化在两个数组的尾部，然后从后向前进行合并 p1 p2在两个数组尾部 p用来指向整个数组的尾部** <br>
+
+[977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/description/)
+**类似于88题 设置一个res数组初始化为0，左右指针去比较原数组的绝对值的值，然后对res的值从后向前进行分配**
+
 ## 快慢指针
 一般都有一个快指针负责探路判断 慢指针负责处理结果 随后再增加
 [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
@@ -97,10 +104,13 @@ def slidingWindow(s: str):
 逆时针思路: 1. 按照逆对角线交换数值  2. 再反转每一行的数字
 <br>
 [48. Rotate Image](https://leetcode.com/problems/rotate-image/)
-<br>类似的还有 
-[61. Rotate List](https://leetcode.com/problems/rotate-list/description/) **1. 反转整个链表 2.再当前k个和后面n-k个 再拼在一起**
 
-2. 螺旋遍历nXm的数组
+<br>类似的还有<br>
+反转数组或链表
+[61. Rotate List](https://leetcode.com/problems/rotate-list/description/) **1. 反转整个链表 2.再当前k个和后面n-k个 再拼在一起** <br>
+[1260. Shift 2D Grid](https://leetcode.com/problems/shift-2d-grid/description/) **# 可以先抽象成一个一维数组 然后移动k位 变成一维之后 移动k位就可以变成 反反转数组的操作即  先进行一次反转 然后反转前k位和后面n-k位**
+
+3. 螺旋遍历nXm的数组
 [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/description/)
 <br> **给予4个边界，遍历从左到右 上到下 右到左 下到上 四步 **循环的条件是目标res的数字个数和题目给的数字个数比较** 每次遍历一个部分后就移动边界, 比如左到右就让upperbound变化因为左到右把上边界遍历了一遍
 

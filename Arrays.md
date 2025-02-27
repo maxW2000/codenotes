@@ -91,6 +91,19 @@ def slidingWindow(s: str):
 ```
 ## 左侧边界与右侧边界的二分查找
 
+# 数组花式遍历技巧
+1. 旋转一个nXn的二维数组
+顺时针思路: 1. 按照正对角线交换数值，2. 再反转每一行的数字
+逆时针思路: 1. 按照逆对角线交换数值  2. 再反转每一行的数字
+<br>
+[48. Rotate Image](https://leetcode.com/problems/rotate-image/)
+<br>类似的还有 
+[61. Rotate List](https://leetcode.com/problems/rotate-list/description/) **1. 反转整个链表 2.再当前k个和后面n-k个 再拼在一起**
+
+2. 螺旋遍历nXm的数组
+[54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/description/)
+<br> **给予4个边界，遍历从左到右 上到下 右到左 下到上 四步 **循环的条件是目标res的数字个数和题目给的数字个数比较** 每次遍历一个部分后就移动边界, 比如左到右就让upperbound变化因为左到右把上边界遍历了一遍
+
 
 
 

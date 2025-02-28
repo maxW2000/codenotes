@@ -119,3 +119,10 @@ b       # 此时的 pre 是反转后的头结点
 3. 返回第一步 递归到调用主函数到尾
 
 
+# 链表判断回文
+[234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/description/) <br>
+**快慢指针** + **链表反转** + **左右指针** -> 快慢指针找到链表中点的后一个，反转从这个点开始的链表, left 从前往后遍历，right反转后链表从后往前遍历 对比数值就可以
+<br> 注意反转后的对比 while right判断 因为反转后的第一个变成了最后一个且指向null
+
+
+

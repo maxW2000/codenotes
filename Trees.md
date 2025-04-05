@@ -14,3 +14,4 @@
 
 # 二叉树 构造篇
 **二叉树的构造问题一般都是使用「分解问题」的思路：构造整棵树 = 根节点 + 构造左子树 + 构造右子树。**
+1. [后序中序构建二叉树](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/)

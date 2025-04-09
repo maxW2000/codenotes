@@ -22,7 +22,37 @@
 # 二叉树 题目练习
 
 ## 递归 遍历思维模式
+题库 -> (https://labuladong.online/algo/problem-set/binary-tree-traverse-i/)
 
+```
+#跟路径有关的题目模板都是
+def targetfunction(root):
+  self.path = [] / "" 字符串或者列表
+  self.traverse(root)
+  # 根据题目需要定义
+  self.res
+  self.sum / count 等
+
+def traverse(root):
+  if root is None:
+    return
+
+  # 根据题目对叶子节点进行判断并且修改参数 self.path 等
+  if root.left is None and root.right is None:
+      一系列判断
+      return
+
+  self.path 更新
+  # 前序位置
+
+  # 根据题目要求 判断先right 还是 left
+  self.traverse(root.left)
+  self.traverse(root.right)
+
+  # 后序位置
+  self.path 退出
+  
+```
 ## 递归 分解问题思维模式
 
 ## 非递归 层序遍历

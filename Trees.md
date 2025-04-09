@@ -22,7 +22,9 @@
 # 二叉树 题目练习
 
 ## 递归 遍历思维模式
-题库 -> (https://labuladong.online/algo/problem-set/binary-tree-traverse-i/)
+题库 -> (https://labuladong.online/algo/problem-set/binary-tree-traverse-i/) <br>
+题库2 -> https://labuladong.online/algo/problem-set/binary-tree-traverse-ii/
+
 
 ```
 #跟路径有关的题目模板都是
@@ -32,6 +34,7 @@ def targetfunction(root):
   # 根据题目需要定义
   self.res
   self.sum / count 等
+  self.depth
 
 def traverse(root):
   if root is None:

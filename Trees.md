@@ -17,3 +17,12 @@
 1. [前序中序构建二叉树](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/)
 2. [后序中序构建二叉树](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/)
 3. [前序后序构架二叉树](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/)
+
+
+# 二叉树 题目练习
+
+## 递归 遍历思维模式
+
+## 递归 分解问题思维模式
+
+## 非递归 层序遍历

@@ -1,3 +1,43 @@
+# 图的基础结构
+## 图的逻辑结构
+```
+class Graph：
+  def __init__(self, val):
+    self.val = val
+    self.neighbors = []
+```
+
+## 图的存储方式
+```
+# 邻接表
+# graph[x] 存储x的所有邻居节点
+graph: List[List[int]] = []
+
+# 邻接矩阵
+# matrix[x][y] 记录是否有一条边从x指向y
+matrix: List[List[Bool]] = []
+
+# 如果图的节点不是int 就用一个哈希表映射一下就可以
+```
+
+```
+# 带权重的图存储
+# 邻接表
+# graph[x] 存储 x 的所有邻居节点以及对应的权重
+# 具体实现不一定非得这样，可以参考后面的通用实现
+class Edge:
+    def __init__(self, to: int, weight: int):
+        self.to = to
+        self.weight = weight
+
+graph: list[list[Edge]] = []
+
+# 邻接矩阵
+# matrix[x][y] 记录 x 指向 y 的边的权重，0 表示不相邻
+matrix: list[list[int]] = []
+```
+
+
 # DFS 深度优先遍历
 **DFS 算法求所有路径**
 

@@ -49,3 +49,36 @@ matrix: list[list[int]] = []
 # BFS 广度优先遍历
 
 1. BFS 算法一般只用来**寻找那条最短路径，不会用来求所有路径**
+
+```
+from collections import deque
+算法框架
+# 从 s开始遍历所有框架
+def bfs(graph, s):
+    # 记录节点是否被访问过
+    visted = [False] * len(graph)
+    q = deque([s])
+    visited[s] = True
+
+    step = 0
+    while q:
+        # 用于记录当前层有多少个节点
+        sz = len(q)
+        for i in range(sz):
+            cur = q.popleft()
+            print(f"visit {cur} at step {step}")
+            # 判断是否到达终点
+            if cur == target:
+                return step
+
+            # 向四周扩散节点
+            for to in neighborsOf(cur):
+                if not visited[to]:
+                   q.append(to)
+                   visited[to] = True
+    # 走到这里还没有 就是没有
+    return -1
+    
+```
+## 例题
+1. [752. Open the Lock](https://leetcode.com/problems/open-the-lock/description/)
